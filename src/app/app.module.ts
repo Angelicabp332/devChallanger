@@ -8,7 +8,6 @@ import { SelectCountryPageComponent } from './components/select-country-page/sel
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
 import { FormsModule } from '@angular/forms';
 import {MatChipsModule} from '@angular/material/chips';
 
@@ -26,7 +25,6 @@ import {MatChipsModule} from '@angular/material/chips';
         HttpClientModule,
         BrowserAnimationsModule,
         MatTableModule,
-        MatPaginatorModule,
         FormsModule,
         MatChipsModule
     ]

@@ -1,0 +1,136 @@
+<div class="container">
+
+  <div class="row min-container">
+
+    <div class="text-up semibold-16">
+      <p>Found {{countries.length}} countries</p>
+    </div>
+
+    <div class="input-icon">
+      <input (click)="resetStatus()"
+        [(ngModel)]="textInput"
+        (ngModelChange)="searchActive(textInput.toLocaleLowerCase())"
+        type="text"
+        class="form-control bold-12"
+        placeholder="Search by name, region, subregion "
+        #txtInput>
+        <img src="../../../assets/icons/Search.png">
+    </div>
+  </div>
+
+
+  <div class="container-body">
+
+    <div class="controls">
+      <p class="bold-12 sub"><b>Sort by</b></p>
+
+      <div class="container-select">
+
+      <select class="semibold-14" (change)="sorter($event.target)">
+        <option value="" disabled selected hidden>Selection</option>
+        <option *ngFor="let i of sortBy"  [value]="i">{{i | titlecase}}</option>
+      </select>
+      <img src="../../../assets/icons/Expand_down.png">
+    </div>
+
+    <div class="cointainer-region">
+      <p class="bold-12 sub"><b>Region</b></p>
+
+      <div class="chips">
+       <button class="chips-btn" *ngFor="let i of regionBy" (click)="searchByRegion(i);  resetStatus()" [ngClass]="{'button-clicked': textchip.includes(i)  && oprimido[i] = true}">
+        <p class="semibold-14 textPlan">{{i | titlecase}}</p>
+       </button>
+      </div>
+    </div>
+
+   <div class="container-status">
+      <p class="bold-12 sub"><b>Status</b></p>
+
+      <div class="contiene-checks">
+
+        <div>
+          <label class="checkbox-container">
+            <input type="radio" class="checkbox-input" name="status" value="member" [(ngModel)]="selectedStatus" (change)="getStatus($event.target)">
+            <span class="custom-checkbox"></span>
+            <p class="semibold-14 text-check">Member Of The United Nations</p>
+          </label>
+        </div>
+
+        <div>
+          <label class="checkbox-container">
+            <input type="radio" class="checkbox-input" name="status" value="nomember" [(ngModel)]="selectedStatus" (change)="getStatus($event.target)">
+            <span class="custom-checkbox"></span>
+            <p class="semibold-14 text-check">Independent</p>
+          </label>
+        </div>
+
+      </div>
+    </div>
+
+    </div>
+
+    <div class="container-table">
+
+    <div>
+    <table class="table table-hover text-center" >
+      <thead class="head-table">
+        <tr>
+          <th class="bold-12 sub" [ngClass]="{'gap-when-no-found':!noFound}">Flag</th>
+          <th class="bold-12 sub" [ngClass]="{'gap-when-no-found':!noFound}">Name</th>
+          <th class="bold-12 sub" [ngClass]="{'gap-when-no-found':!noFound}">Population</th>
+          <th class="bold-12 sub" [ngClass]="{'gap-when-no-found':!noFound}">Area (km²)</th>
+          <th class="bold-12 sub" [ngClass]="{'gap-when-no-found':!noFound}">Region</th>
+          <th></th>
+        </tr>
+      </thead>
+      <div class="line" [ngClass]="{'line-more-small': !noFound}"></div>
+
+      <tbody *ngIf="loading">
+        <!-- <div class="skeleton" > -->
+        <tr *ngFor="let item of times">
+          <td>
+            <div class="cuadro"></div>
+          </td>
+          <td>
+            <div class="linea-load"></div>
+          </td>
+          <td>
+            <div class="linea-load"></div>
+          </td>
+          <td>
+            <div class="linea-load"></div>
+          </td>
+          <td>
+            <div class="linea-load"></div>
+          </td>
+        </tr>
+      </tbody>
+
+      <tbody *ngIf="!noFound">
+        <tr class="no-found">
+          <td>No found country '{{textInput}}'</td></tr>
+      </tbody>
+
+      <tbody *ngIf="!loading && noFound">
+        <tr *ngFor="let country of countries; let i = index" (click)="onRowClicked(country)" >
+          <td>
+            <img [src]="country.flags.svg" [alt]="country.name.common" class="flags">
+          </td>
+          <td class="semibold-14 name">{{ country.name.common }}</td>
+          <td class="semibold-14">{{ country.population | number }}</td>
+          <td class="semibold-14">{{ country.area | number}}</td>
+          <td class="semibold-14">{{ country.region}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  </div>
+
+
+
+  </div>
+
+
+</div>

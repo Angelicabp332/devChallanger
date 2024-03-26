@@ -1,0 +1,144 @@
+.img-big {
+  max-width: 240px;
+  min-width: 240px;
+  min-height: 160px;
+  max-height: 160px;
+  border-radius: 8px;
+  position: relative;
+  top: -41px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nombres-common{
+  position: relative;
+  top: -58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nombres-official{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -86px;
+}
+
+.container{
+  background-color: #1B1D1F;
+  border: 1px solid #282B30;
+  position: absolute;
+  max-height: fit-content;
+  width: 59% ;
+  min-height: 500px;
+  max-width: 1161px;
+  border-radius: 15px;
+  margin: auto;
+  top: 40%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #D2D5DA;
+}
+
+.type-boxes{
+  background-color: #282B30;
+  color: #D2D5DA;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  border: none;
+  padding-left: 17px;
+  padding-right: 17px;
+}
+
+.contiene-btn{
+  display: flex;
+  grid-gap: 39px;
+  justify-content: center;
+  margin-top: -70px;
+  margin-bottom: 34px;
+}
+
+.line {
+  height: 1px;
+    width: 100%;
+    background-color: #6C727F;
+    opacity: 0.2;
+    margin-top: 7px;
+}
+
+.contiene-dos{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.gray{
+  color: #6C727F;
+}
+
+.Country-flag{
+  width: 75px;
+  min-height: 49.91px;
+  max-height: 49.91px;
+  min-width: 75px;
+  max-width: 75px;
+}
+
+.boxes{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(81px, 0fr));
+  margin-top: 9px;
+  margin-left: 12px;
+  gap: 7px;
+}
+
+.last-part{
+  margin-bottom: 7%;
+}
+
+.no-borders{
+  display: flex;
+    justify-content: center;
+    background-color: #4E80EE;
+    margin-left: 32%;
+    margin-right: 32%;
+    margin-bottom: -29px;
+    border-radius: 15px;
+    margin-top: 1%;
+}
+
+/*skeleton*/
+.caja{
+  background-color: #282B30;
+  width: 58px;
+  height: 44px;
+  border-radius: 3px;
+}
+
+.boxes-skeleton{
+  display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(81px, 0fr));
+    margin-top: 16px;
+    margin-left: 16px;
+    gap: 7px;
+}
+
+.linea-load{
+  background-color: #282B30;
+  margin-top: 11%;
+  width: 60px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+@media (max-width: 928px) {
+  .container{
+    width: 78%;
+  }
+}

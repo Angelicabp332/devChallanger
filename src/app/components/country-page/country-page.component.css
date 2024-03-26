@@ -1,0 +1,398 @@
+/*Estilos de toda la pagina y la tabla*/
+.container{
+  background-color: #1B1D1F;
+  border: 1px solid #282B30;
+  position: absolute;
+  max-height: fit-content;
+  width: 95% ;
+  min-height: 500px;
+  max-width: 1161px;
+  border-radius: 15px;
+  margin: auto;
+  top: 45%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #D2D5DA;
+}
+
+.flags {
+  min-width: 52px;
+  max-width: 52px;
+  min-height: 35px;
+  max-height: 35px;
+  border-radius: 3px;
+}
+
+.sub{
+  color: #6C727F
+}
+
+.container-body{
+  display: flex;
+  padding: 34px;
+}
+
+.min-container{
+  padding-left: 34px;
+  padding-right: 34px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-up{
+  color: #6C727F
+}
+
+.table td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.table th, .table td {
+  text-align: left;
+}
+
+.table td {
+  padding-right: 55px;
+}
+
+tbody tr:hover{
+  cursor: pointer;
+  }
+
+  .head-table{
+    margin-bottom: 0px;
+  }
+
+.line {
+  display: flex;
+  position: relative;
+  height: 2px;
+  width: 763%;
+  background-color: #6C727F;
+  opacity: 0.5;
+  margin-top: 17px;
+}
+
+/*Estilos del input*/
+input{
+  background-color: #282B30;
+  height: 39px;
+  width: 270px;
+  border-radius: 11px;
+  border: none;
+  padding-left: 15%;
+  color: #D2D5DA;
+  font-family: 'Be Vietnam Pro', sans-serif !important;
+}
+
+input::placeholder{
+  color: #6C727F ;
+  font-family: 'Be Vietnam Pro', sans-serif !important;
+}
+
+input:focus {
+  color: #D2D5DA; /* Cambia el color según tus necesidades */
+  font-family: 'Be Vietnam Pro', sans-serif !important;
+
+}
+
+.input-icon {
+  position: relative;
+  display: flex;
+  margin-top: auto;
+}
+
+.input-icon img {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-47%);
+  width: 22px;
+}
+
+/*Contenedor de la parte del select*/
+.controls{
+  padding-right: 2%;
+  margin-top: -13px;
+}
+
+/*Estilos del select*/
+.container-select{
+  position: relative;
+  display: flex;
+  margin-top: auto;
+}
+
+.container-select img {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateX(1328%) translateY(-43%);
+  width: 15px;
+}
+
+select{
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #282B30;
+  height: 34px;
+  width: 238px;
+  border-radius: 11px;
+  border: none;
+  font-family: 'Be Vietnam Pro', sans-serif !important;
+  color: #D2D5DA;
+  padding-left: 14px;
+}
+
+select option{
+  color: #6C727F ;
+  font-family: 'Be Vietnam Pro', sans-serif !important;
+  border-color: #282B30;
+
+}
+
+/*Contenedor de regiones*/
+.cointainer-region{
+  margin-top: 14%;
+}
+
+.chips{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(73px, 1fr));
+  grid-gap: 10px;
+}
+
+.chips-btn{
+  display: flex;
+  background-color: #282B30;
+  color: #D2D5DA;
+  /* width: 60px; */
+  width: auto;
+  height: 31px;
+  border-radius: 10px;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.button-clicked{
+  opacity: 0.5;
+}
+
+.textPlan{
+  color: #D2D5DA;
+  margin: auto;
+  font-family: 'Be Vietnam Pro', sans-serif !important;
+}
+
+.container-status{
+  margin-top: 17%;
+
+}
+
+/*Checkbox*/
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 13px;
+  user-select: none;
+}
+
+.checkbox-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-color: #282B30;
+  border-radius: 20%;
+  margin-right: 10px;
+  margin-top: 11px;
+  border: #6C727F solid 2px;
+}
+
+.checkbox-input:checked ~ .custom-checkbox {
+  background-color: #2196F3;
+}
+
+.custom-checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-input:checked ~ .custom-checkbox:after {
+  display: block;
+}
+
+.checkbox-container .custom-checkbox:after {
+  left: 8px;
+  top: 4px;
+  width: 2px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.contiene-checks{
+  margin-top: -10px;
+}
+
+
+/*skeleton*/
+
+.skeleton{
+  margin-top: 42%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 0fr));
+  gap: 10px;
+
+}
+
+.cuadro{
+  background-color: #282B30;
+  width: 48px;
+  height: 35px;
+  border-radius: 3px;
+}
+
+.linea-load{
+  background-color: #282B30;
+  width: 104px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.no-found{
+  display: flex;
+    justify-content: center;
+    background-color: #4E80EE;
+    margin-left: 126%;
+    margin-right: -193%;
+    border-radius: 15px;
+    margin-top: 26%;
+    max-width: 280px;
+}
+
+.gap-when-no-found{
+  width: 150px;
+}
+
+
+.line-more-small{
+  /* min-width: 287%; */
+  max-width: 450%;
+}
+
+/*Responsive*/
+@media (max-width: 1194px) {
+  .line {
+    width:736%;
+  }
+}
+
+@media (max-width: 1165px) {
+  .line {
+    width:700%;
+  }
+}
+
+@media (max-width: 1127px) {
+  .line {
+    width:674%;
+  }
+}
+
+@media (max-width: 1097px) {
+  .line {
+    width:647%;
+  }
+}
+
+@media (max-width: 1064px) {
+  .line {
+    width:686%;
+  }
+  .table td{
+    padding-right: 44px;
+  }
+}
+
+@media (max-width: 1029px) {
+  .container-body {
+    flex-direction: column;
+  }
+  .cointainer-region{
+    margin-top: 5%;
+  }
+  .container-status{
+    margin-top: 5%;
+    margin-bottom: 4%;
+  }
+  .table td{
+    padding-right: 34px;
+    max-width: 136px;
+  }
+  .line{
+    width: 749%;
+  }
+  .container{
+    width: 90%;
+  }
+}
+
+@media (max-width: 787px) {
+  .line{
+    width: 670%;
+  }
+}
+@media (max-width: 743px) {
+  .line{
+    width: 674%;
+  }
+  .table td{
+    padding-right: 27px;
+    max-width: 99px;
+  }
+}
+
+@media (max-width: 698px) {
+  .linea-load{
+    width: 89px;
+  }
+}
+
+@media (max-width: 671px) {
+  .line{
+    width: 720%;
+  }
+  .table td{
+    padding-right: 15px;
+    max-width: 97px;
+  }
+  .linea-load{
+    width: 89px;
+  }
+}
+
+@media (max-width: 612px) {
+  .container {
+    min-width:537px;
+  }
+}

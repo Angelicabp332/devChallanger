@@ -1,0 +1,85 @@
+
+<div class="container" *ngIf="country">
+
+  <div class="flag" >
+    <img [src]="country.flags.svg"  class="img-big">
+  </div>
+
+  <div class="nombres-common">
+    <p class="semibold-32 common">{{ country.name.common }}</p>
+  </div>
+  <div class="nombres-official">
+    <p class="semibold-16 official">{{ country.name.official }}</p>
+  </div>
+
+  <div class="contiene-btn">
+
+    <div class="type-boxes">
+      <p>Population<a class=""></a>{{ country.population | number }}</p>
+    </div>
+
+    <div class="type-boxes">
+      <p>Area (km²)<a class=""></a> {{country.area | number}}</p>
+    </div>
+
+  </div>
+
+  <div class="line"></div>
+    <div class="contiene-dos">
+      <p class="bold-12 gray">Capital</p>
+      <p class="bold-12">{{country.capital}}</p>
+    </div>
+    <div class="line"></div>
+    <div class="contiene-dos">
+      <p class="bold-12 gray">Subregion</p>
+      <p class="bold-12">{{country.subregion}}</p>
+    </div>
+    <div class="line"></div>
+    <div class="contiene-dos">
+      <p class="bold-12 gray">Language</p>
+      <p class="bold-12">{{languages}}</p>
+    </div>
+    <div class="line"></div>
+    <div class="contiene-dos">
+      <p class="bold-12 gray">Currencies</p>
+      <p class="bold-12">{{currencies}}</p>
+    </div>
+    <div class="line"></div>
+    <div class="contiene-dos">
+      <p class="bold-12 gray">Continents</p>
+      <p class="bold-12">{{country.continents}}</p>
+    </div>
+    <div class="line"></div>
+    <div class="contiene-dos">
+      <p class="bold-12 gray">Neighbouring contries</p>
+    </div>
+    <div class="last-part">
+      <div class="no-borders" *ngIf="bordersExist && !loading">
+        <p class="bold-12">It hasn't borders</p>
+      </div>
+      <div class="boxes-skeleton" *ngIf="loading">
+        <div>
+          <div class="caja"></div>
+          <div class="linea-load"></div>
+        </div>
+        <div>
+          <div class="caja"></div>
+          <div class="linea-load"></div>
+        </div>
+        <div>
+          <div class="caja"></div>
+          <div class="linea-load"></div>
+        </div>
+        <div>
+          <div class="caja"></div>
+          <div class="linea-load"></div>
+        </div>
+      </div>
+      <div class="boxes" *ngIf="!loading">
+          <p class="bold-12" *ngFor="let flag of flags" (click)="onRowClicked(flag.cca3)"><img [src]="flag.flag" class="Country-flag">{{flag.name}}</p>
+      </div>
+    </div>
+
+
+</div>
+

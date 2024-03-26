@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
+
+body, html {
+  background-color: #1B1D1F;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  height: 125%;
+}
+
+.semibold-32 {
+  /* font-weight: 600; */
+  font-size: 2rem;
+}
+
+.semibold-16 {
+  /* font-weight: 600; */
+  font-size: 1rem;
+}
+
+.bold-14 {
+  /* font-weight: 700; */
+  font-size: 0.875rem;
+}
+
+.bold-12 {
+  /* font-size: 12px; */
+  font-size: 0.75rem;
+}
